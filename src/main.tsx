@@ -8,6 +8,15 @@ import "./index.css";
 //   const { worker } = import("./mocks/browser");
 //   worker.start();
 // }
+
+// if (import.meta.env.MODE === "development") {
+//   const { worker } = import("./mocks/browser");
+//   worker.start();
+// }
+
+if (process.env.NODE_ENV === "development") {
+  import("./mocks/browser");
+}
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

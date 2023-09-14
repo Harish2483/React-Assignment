@@ -22,6 +22,9 @@ export const Navbar = () => {
         <NavLink className="mr-4 text-2xl " to="/contact">
           Contact Us
         </NavLink>
+        <NavLink className="mr-4 text-2xl " to="/usersdata">
+          Users
+        </NavLink>
       </nav>
       <Outlet />
     </>

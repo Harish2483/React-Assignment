@@ -20,6 +20,7 @@ import Form, { contactAction } from "./components/Form";
 import { Navbar } from "./components/Navbar";
 import { Careers, careersLoader } from "./components/Careers";
 import { CareersLayout } from "./layouts/CareersLayout";
+import { UsersData } from "./components/users/UsersData";
 
 const LazyAbout = React.lazy(() => import("./components/About"));
 
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
         <Route index element={<Careers />} loader={careersLoader} />
       </Route>
 
+      <Route path="usersdata" element={<UsersData />} />
       <Route path="contact" element={<Form />} action={contactAction} />
 
       <Route path="*" element={<NoMatch />} />

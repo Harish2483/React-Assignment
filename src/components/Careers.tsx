@@ -41,6 +41,6 @@ export const Careers = () => {
 };
 
 export const careersLoader = async () => {
-  const res = await fetch("http://localhost:4000/careers");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
   return res.json();
 };
