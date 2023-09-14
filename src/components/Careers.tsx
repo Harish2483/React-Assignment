@@ -9,9 +9,8 @@ import { Link, useLoaderData } from "react-router-dom";
 // };
 type Token = {
   id: number;
-  title: string;
-  salary: number;
-  location: string;
+  name: string;
+  email: string;
 };
 
 type TokenData = {
@@ -31,8 +30,8 @@ export const Careers = () => {
         {careers &&
           careers.map((token: Token) => (
             <Link to="/" key={token.id}>
-              <p>Title - {token.title}</p>
-              <p>Based in - {token.location}.</p>
+              <p>Title - {token.name}</p>
+              <p>Based in - {token.email}.</p>
             </Link>
           ))}
       </div>
