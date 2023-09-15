@@ -7,17 +7,9 @@ export const UsersData = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
-      .then((data) =>
-        setUsers(
-          data.map((user: { name: string }) => {
-            user.name;
-            // console.log(user.name);
-          })
-        )
-      )
-      .catch(() => {
-        setError("Error fetching errors");
-      });
+      .then((data) => setUsers(data.map((user: { name: string }) => user.name)))
+      // console.log(user.name))
+      .catch(() => setError("Error fetching errors"));
   }, []);
 
   return (
@@ -28,7 +20,7 @@ export const UsersData = () => {
       <ul className="text-3xl mt-2 text-white flex flex-col">
         {users.map((user) => (
           <li className="text-3xl mt-2 text-white" key={user}>
-            User Details{user}
+            {user}
           </li>
         ))}
       </ul>
